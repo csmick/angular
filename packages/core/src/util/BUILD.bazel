@@ -17,8 +17,8 @@ ts_project(
     deps = [
         "//:node_modules/rxjs",
         "//packages:goog_types",
+        "//packages/core/primitives/interface",
         "//packages/core/primitives/signals",
-        "//packages/core/src/interface",
     ],
 )
 

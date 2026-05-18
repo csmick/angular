@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import {getComponentDef} from '../def_getters';
 import type {ClassDebugInfo} from '../interfaces/definition';
 

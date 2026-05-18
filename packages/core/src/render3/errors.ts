@@ -7,7 +7,7 @@
  */
 
 import {RuntimeError, RuntimeErrorCode} from '../errors';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 
 import {getComponentDef} from './def_getters';
 import {getDeclarationComponentDef} from './instructions/element_validation';

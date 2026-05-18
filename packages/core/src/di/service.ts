@@ -6,7 +6,8 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 
-import {AbstractType, Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
+import {AbstractType} from '../interface/type';
 import {makeDecorator, TypeDecorator} from '../util/decorators';
 import {compileService} from './jit/service';
 

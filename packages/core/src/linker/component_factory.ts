@@ -8,7 +8,7 @@
 
 import type {ChangeDetectorRef} from '../change_detection/change_detection';
 import type {Injector} from '../di/injector';
-import type {Type} from '../interface/type';
+import type {Type} from '../../primitives/interface';
 
 import type {ElementRef} from './element_ref';
 import type {ViewRef} from './view_ref';

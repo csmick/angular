@@ -52,4 +52,3 @@ export {
 export {DoBootstrap} from './metadata/do_bootstrap';
 export {NgModule, NgModuleDecorator} from './metadata/ng_module';
 export {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, SchemaMetadata} from './metadata/schema';
-export {ViewEncapsulation} from './metadata/view';

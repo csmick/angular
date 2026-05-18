@@ -5,52 +5,25 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.dev/license
  */
-import {ReactiveLViewConsumer} from '../reactive_lview_consumer';
-import {assertTNode, assertLView} from '../assert';
-import {getFrameworkDIDebugData} from '../debug/framework_injector_profiler';
-import {NodeInjector, getNodeInjectorTNode, getNodeInjectorLView} from '../di';
-import {REACTIVE_TEMPLATE_CONSUMER, HOST, LView, CONTEXT} from '../interfaces/view';
-import {EffectNode, EffectRefImpl} from '../reactivity/effect';
-import {Injector} from '../../di/injector';
-import {R3Injector} from '../../di/r3_injector';
-import {throwError} from '../../util/assert';
 import {
   ComputedNode,
+  DebugSignalGraph,
+  DebugSignalGraphEdge,
+  DebugSignalGraphNode,
   ReactiveNode,
-  ReactiveNodeKind,
   SIGNAL,
   SignalNode,
 } from '../../../primitives/signals';
+import {Injector} from '../../di/injector';
+import {R3Injector} from '../../di/r3_injector';
+import {throwError} from '../../util/assert';
+import {assertLView, assertTNode} from '../assert';
+import {getFrameworkDIDebugData} from '../debug/framework_injector_profiler';
+import {NodeInjector, getNodeInjectorLView, getNodeInjectorTNode} from '../di';
 import {isLView} from '../interfaces/type_checks';
-
-export interface DebugSignalGraphNode {
-  kind: ReactiveNodeKind;
-  id: string;
-  epoch: number;
-  label?: string;
-  value?: unknown;
-  debuggableFn?: () => unknown;
-}
-
-export interface DebugSignalGraphEdge {
-  /**
-   * Index of a signal node in the `nodes` array that is a consumer of the signal produced by the producer node.
-   */
-  consumer: number;
-
-  /**
-   * Index of a signal node in the `nodes` array that is a producer of the signal consumed by the consumer node.
-   */
-  producer: number;
-}
-
-/**
- * A debug representation of the signal graph.
- */
-export interface DebugSignalGraph {
-  nodes: DebugSignalGraphNode[];
-  edges: DebugSignalGraphEdge[];
-}
+import {CONTEXT, HOST, LView, REACTIVE_TEMPLATE_CONSUMER} from '../interfaces/view';
+import {ReactiveLViewConsumer} from '../reactive_lview_consumer';
+import {EffectNode, EffectRefImpl} from '../reactivity/effect';
 
 function isComputedNode(node: ReactiveNode): node is ComputedNode<unknown> {
   return node.kind === 'computed';

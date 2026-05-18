@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {assertDefined, assertEqual, assertNotEqual} from '../util/assert';
 import {assertLView} from './assert';
 import {getComponentDef} from './def_getters';
@@ -38,7 +38,7 @@ import {cleanupLView as cleanupDehydratedLView} from '../hydration/cleanup';
 import {destroyLView, removeViewFromDOM} from './node_manipulation';
 import {RendererFactory} from './interfaces/renderer';
 import {NgZone} from '../zone';
-import {ViewEncapsulation} from '../metadata/view';
+import {ViewEncapsulation} from '../../primitives/metadata';
 import {NG_COMP_DEF} from './fields';
 import {
   createLView,

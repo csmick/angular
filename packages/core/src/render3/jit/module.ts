@@ -15,7 +15,7 @@ import {resolveForwardRef} from '../../di/forward_ref';
 import {NG_INJ_DEF} from '../../di/interface/defs';
 import type {ModuleWithProviders} from '../../di/interface/provider';
 import {reflectDependencies} from '../../di/jit/util';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import {registerNgModuleType} from '../../linker/ng_module_registration';
 import type {NgModule} from '../../metadata/ng_module';
 import type {

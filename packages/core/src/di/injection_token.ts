@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {assertLessThan} from '../util/assert';
 
 import {ɵɵdefineInjectable} from './interface/defs';

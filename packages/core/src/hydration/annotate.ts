@@ -16,7 +16,7 @@ import {
 } from '../defer/interfaces';
 import {getLDeferBlockDetails, getTDeferBlockDetails, isDeferBlock} from '../defer/utils';
 import {isDetachedByI18n} from '../i18n/utils';
-import {ViewEncapsulation} from '../metadata';
+import {ViewEncapsulation} from '../../primitives/metadata';
 import {assertTNode} from '../render3/assert';
 import {collectNativeNodes, collectNativeNodesInLContainer} from '../render3/collect_native_nodes';
 import {getComponentDef} from '../render3/def_getters';

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {stringify} from '../util/stringify';
 import {NG_FACTORY_DEF} from './fields';
 

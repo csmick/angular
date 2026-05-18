@@ -13,7 +13,7 @@ import {provideZonelessChangeDetectionInternal} from '../change_detection/schedu
 import {EnvironmentProviders, Injectable, Injector, Provider} from '../di';
 import {errorHandlerEnvironmentInitializer} from '../error_handler';
 import {RuntimeError, RuntimeErrorCode} from '../errors';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {CompilerOptions} from '../linker';
 import {NgModuleFactory, NgModuleRef} from '../linker/ng_module_factory';
 import {createNgModuleRefWithProviders} from '../render3/ng_module_ref';

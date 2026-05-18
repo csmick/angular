@@ -7,7 +7,7 @@
  */
 
 import {RuntimeError, RuntimeErrorCode} from '../errors';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {NgModuleFactory as R3NgModuleFactory} from '../render3/ng_module_ref';
 
 import {NgModuleFactory} from './ng_module_factory';

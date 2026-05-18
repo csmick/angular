@@ -7,7 +7,7 @@
  */
 
 import {formatRuntimeError, RuntimeError, RuntimeErrorCode} from '../../errors';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, SchemaMetadata} from '../../metadata/schema';
 import {throwError} from '../../util/assert';
 import {getComponentDef} from '../def_getters';

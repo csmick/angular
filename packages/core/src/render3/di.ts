@@ -13,7 +13,7 @@ import {BackwardsCompatibleInjector, convertToBitFlags} from '../di/injector_com
 import {InjectorMarkers} from '../di/injector_marker';
 import {InjectOptions, InternalInjectFlags} from '../di/interface/injector';
 import {ProviderToken} from '../di/provider_token';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {assertDefined, assertEqual, assertIndexInRange} from '../util/assert';
 import {noSideEffects} from '../util/closure';
 

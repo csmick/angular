@@ -12,7 +12,7 @@ import {
   R3PipeMetadataFacade,
 } from '../../compiler/compiler_facade';
 import {reflectDependencies} from '../../di/jit/util';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import type {Pipe} from '../../metadata/directives';
 import {NG_FACTORY_DEF, NG_PIPE_DEF} from '../fields';
 

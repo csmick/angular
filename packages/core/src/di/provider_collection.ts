@@ -7,7 +7,7 @@
  */
 
 import {RuntimeError, RuntimeErrorCode} from '../errors';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {getComponentDef} from '../render3/def_getters';
 import {getFactoryDef} from '../render3/definition_factory';
 import {cyclicDependencyErrorWithDetails, throwInvalidProviderError} from '../render3/errors_di';

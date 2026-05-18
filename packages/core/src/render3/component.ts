@@ -8,7 +8,7 @@
 
 import {Injector} from '../di/injector';
 import {EnvironmentInjector, getNullInjector} from '../di/r3_injector';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {ComponentRef} from '../linker/component_factory';
 
 import {ComponentFactory} from './component_ref';

@@ -8,7 +8,7 @@
 
 import {Injector} from '../../di/injector';
 import {EnvironmentInjector} from '../../di/r3_injector';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import {assertDefined, throwError} from '../../util/assert';
 import {assertTNodeForLView} from '../assert';
 import {getComponentDef} from '../def_getters';

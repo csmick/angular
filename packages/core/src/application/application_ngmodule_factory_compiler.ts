@@ -8,7 +8,7 @@
 
 import {getCompilerFacade, JitCompilerUsage} from '../compiler/compiler_facade';
 import {Injector} from '../di/injector';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {COMPILER_OPTIONS, CompilerOptions} from '../linker/compiler';
 import {NgModuleFactory} from '../linker/ng_module_factory';
 import {

@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.dev/license
  */
-import {ViewEncapsulation} from '../../metadata/view';
+import {ViewEncapsulation} from '../../../primitives/metadata';
 
 export interface JitCompilerOptions {
   defaultEncapsulation?: ViewEncapsulation;

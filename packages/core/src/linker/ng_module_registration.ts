@@ -7,7 +7,7 @@
  */
 
 import {RuntimeError, RuntimeErrorCode} from '../errors';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {NgModuleType} from '../metadata/ng_module_def';
 import {stringify} from '../util/stringify';
 

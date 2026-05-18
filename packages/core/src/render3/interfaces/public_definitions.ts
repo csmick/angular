@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 
 // This file contains types that will be published to npm in library typings files.
 

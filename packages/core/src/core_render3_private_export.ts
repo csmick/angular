@@ -44,14 +44,7 @@ export {
   NG_PIPE_DEF as ɵNG_PIPE_DEF,
 } from './render3/fields';
 export {
-  AcxChangeDetectionStrategy as ɵAcxChangeDetectionStrategy,
-  AcxComponentDebugMetadata as ɵAcxComponentDebugMetadata,
-  AcxDirectiveDebugMetadata as ɵAcxDirectiveDebugMetadata,
-  AcxViewEncapsulation as ɵAcxViewEncapsulation,
-  AngularComponentDebugMetadata as ɵAngularComponentDebugMetadata,
-  AngularDirectiveDebugMetadata as ɵAngularDirectiveDebugMetadata,
   AttributeMarker as ɵAttributeMarker,
-  BaseDirectiveDebugMetadata as ɵBaseDirectiveDebugMetadata,
   ComponentDef as ɵComponentDef,
   ComponentType as ɵComponentType,
   ControlDirectiveHost as ɵControlDirectiveHost,
@@ -59,7 +52,6 @@ export {
   ɵDEFER_BLOCK_CONFIG,
   ɵDEFER_BLOCK_DEPENDENCY_INTERCEPTOR,
   ɵDeferBlockDependencyInterceptor,
-  DirectiveDebugMetadata as ɵDirectiveDebugMetadata,
   DirectiveDef as ɵDirectiveDef,
   DirectiveType as ɵDirectiveType,
   getDirectives as ɵgetDirectives,
@@ -81,7 +73,6 @@ export {
   ɵsetUnknownElementStrictMode,
   ɵsetUnknownPropertyStrictMode,
   store as ɵstore,
-  WizComponentDebugMetadata as ɵWizComponentDebugMetadata,
   ɵɵadvance,
   ɵɵanimateEnter,
   ɵɵanimateEnterListener,
@@ -281,16 +272,8 @@ export {
 export {compilePipe as ɵcompilePipe} from './render3/jit/pipe';
 export {isNgModule as ɵisNgModule} from './render3/jit/util';
 export {getAsyncClassMetadataFn as ɵgetAsyncClassMetadataFn} from './render3/metadata';
-export {
-  ControlFlowBlock as ɵControlFlowBlock,
-  ControlFlowBlockType as ɵControlFlowBlockType,
-  DeferBlockData as ɵDeferBlockData,
-  ForLoopBlockData as ɵForLoopBlockData,
-} from './render3/util/control_flow_types';
-export {
-  ExternalCoreGlobalUtils as ɵExternalCoreGlobalUtils,
-  FrameworkAgnosticGlobalUtils as ɵFrameworkAgnosticGlobalUtils,
-} from './render3/util/global_utils';
+export {} from './render3/util/control_flow_types';
+export {FrameworkAgnosticGlobalUtils as ɵFrameworkAgnosticGlobalUtils} from './render3/util/global_utils';
 export {getTransferState as ɵgetTransferState} from './render3/util/transfer_state_utils';
 export {
   isViewDirty as ɵisViewDirty,

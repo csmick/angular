@@ -11,7 +11,7 @@ import {
   JitCompilerUsage,
   R3ServiceMetadataFacade,
 } from '../../compiler/compiler_facade';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import {NG_FACTORY_DEF} from '../../render3/fields';
 import type {Service} from '../service';
 import {NG_PROV_DEF} from '../interface/defs';

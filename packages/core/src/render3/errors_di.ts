@@ -9,7 +9,7 @@
 import type {ProviderToken} from '../di';
 import {isEnvironmentProviders} from '../di/interface/provider';
 import {formatRuntimeError, RuntimeError, RuntimeErrorCode} from '../errors';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {assertDefined} from '../util/assert';
 import {getClosureSafeProperty} from '../util/property';
 import {stringify} from '../util/stringify';

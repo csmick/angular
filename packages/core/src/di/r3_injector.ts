@@ -10,7 +10,7 @@ import '../util/ng_dev_mode';
 
 import {RuntimeError, RuntimeErrorCode} from '../errors';
 import {OnDestroy} from '../change_detection/lifecycle_hooks';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {
   emitInjectorToCreateInstanceEvent,
   emitInstanceCreatedByInjectorEvent,

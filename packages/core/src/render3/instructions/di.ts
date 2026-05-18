@@ -10,7 +10,7 @@ import {assertInjectImplementationNotEqual} from '../../di/inject_switch';
 import {ɵɵinject} from '../../di/injector_compatibility';
 import {InternalInjectFlags} from '../../di/interface/injector';
 import {ProviderToken} from '../../di/provider_token';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import {emitInjectEvent} from '../debug/injector_profiler';
 import {getOrCreateInjectable} from '../di';
 import {TDirectiveHostNode} from '../interfaces/node';

@@ -17,7 +17,7 @@ import {
   markRNodeAsClaimedByHydration,
 } from '../hydration/utils';
 import {findMatchingDehydratedView, locateDehydratedViewsInContainer} from '../hydration/views';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {assertNodeInjector} from '../render3/assert';
 import {ComponentFactory} from '../render3/component_ref';
 import {getComponentDef} from '../render3/def_getters';

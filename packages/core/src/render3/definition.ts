@@ -6,13 +6,14 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 
-import {ChangeDetectionStrategy} from '../change_detection/constants';
+import {ChangeDetectionStrategy} from '../../primitives/change_detection';
+import {Type} from '../../primitives/interface';
+import {ViewEncapsulation} from '../../primitives/metadata';
 import {EnvironmentInjector} from '../di/r3_injector';
 import {formatRuntimeError, RuntimeErrorCode} from '../errors';
-import {Type, Writable} from '../interface/type';
+import {Writable} from '../interface/type';
 import {NgModuleDef} from '../metadata/ng_module_def';
 import {SchemaMetadata} from '../metadata/schema';
-import {ViewEncapsulation} from '../metadata/view';
 import {assertNotEqual} from '../util/assert';
 import {noSideEffects} from '../util/closure';
 import {EMPTY_ARRAY, EMPTY_OBJ} from '../util/empty';

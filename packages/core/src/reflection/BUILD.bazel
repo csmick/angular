@@ -14,7 +14,7 @@ ts_project(
         ],
     ),
     deps = [
-        "//packages/core/src/interface",
+        "//packages/core/primitives/interface",
         "//packages/core/src/util",
     ],
 )

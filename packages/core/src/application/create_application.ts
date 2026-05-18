@@ -8,7 +8,7 @@
 
 import {EnvironmentProviders, Provider, StaticProvider} from '../di/interface/provider';
 import {EnvironmentInjector} from '../di/r3_injector';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {createOrReusePlatformInjector} from '../platform/platform';
 import {assertStandaloneComponentType} from '../render3/errors';
 import {EnvironmentNgModuleRefAdapter} from '../render3/ng_module_ref';

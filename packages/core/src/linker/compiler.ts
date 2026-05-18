@@ -9,8 +9,8 @@
 import {Service} from '../di';
 import {InjectionToken} from '../di/injection_token';
 import {StaticProvider} from '../di/interface/provider';
-import {Type} from '../interface/type';
-import {ViewEncapsulation} from '../metadata/view';
+import {Type} from '../../primitives/interface';
+import {ViewEncapsulation} from '../../primitives/metadata';
 import {NgModuleFactory as NgModuleFactoryR3} from '../render3/ng_module_ref';
 
 import {NgModuleFactory} from './ng_module_factory';

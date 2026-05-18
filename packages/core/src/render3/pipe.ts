@@ -9,7 +9,7 @@
 import {PipeTransform} from '../change_detection/pipe_transform';
 import {setInjectImplementation} from '../di/inject_switch';
 import {formatRuntimeError, RuntimeError, RuntimeErrorCode} from '../errors';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 
 import {InjectorProfilerContext, setInjectorProfilerContext} from './debug/injector_profiler';
 import {getFactoryDef} from './definition_factory';

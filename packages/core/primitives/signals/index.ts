@@ -22,11 +22,15 @@ export {ValueEqualityFn, defaultEquals} from './src/equality';
 export {setThrowInvalidWriteToSignalError} from './src/errors';
 export {
   REACTIVE_NODE,
+  SIGNAL,
+  DebugSignalGraph,
+  DebugSignalGraphEdge,
+  DebugSignalGraphNode,
   Reactive,
   ReactiveHookFn,
   ReactiveNode,
   ReactiveNodeKind,
-  SIGNAL,
+  Version,
   consumerAfterComputation,
   consumerBeforeComputation,
   consumerDestroy,
@@ -46,10 +50,10 @@ export {
   runPostProducerCreatedFn,
   setActiveConsumer,
   setPostProducerCreatedFn,
-  Version,
 } from './src/graph';
 export {
   SIGNAL_NODE,
+  SignalBaseGetter,
   SignalGetter,
   SignalNode,
   createSignal,

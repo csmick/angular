@@ -19,7 +19,7 @@ import {
   R3DeclarePipeFacade,
   R3DeclareServiceFacade,
 } from '../../compiler/compiler_facade';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import {setClassMetadata, setClassMetadataAsync} from '../metadata';
 
 import {angularCoreEnv} from './environment';

@@ -8,7 +8,7 @@
 
 import {R3DependencyMetadataFacade} from '../../compiler/compiler_facade';
 import {RuntimeError, RuntimeErrorCode} from '../../errors';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import {ReflectionCapabilities} from '../../reflection/reflection_capabilities';
 import {Host, Inject, Optional, Self, SkipSelf} from '../metadata';
 import {Attribute} from '../metadata_attr';

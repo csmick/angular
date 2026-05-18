@@ -10,7 +10,7 @@ import {createInjectorWithoutInjectorInstances} from '../di/create_injector';
 import {Injector} from '../di/injector';
 import {EnvironmentProviders, Provider} from '../di/interface/provider';
 import {EnvironmentInjector, getNullInjector, R3Injector} from '../di/r3_injector';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {
   InternalNgModuleRef,
   NgModuleFactory as viewEngine_NgModuleFactory,

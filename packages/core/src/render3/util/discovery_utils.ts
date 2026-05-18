@@ -6,9 +6,13 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 
-import {ChangeDetectionStrategy} from '../../change_detection/constants';
+import {ChangeDetectionStrategy} from '../../../primitives/change_detection';
+import {
+  AngularComponentDebugMetadata,
+  AngularDirectiveDebugMetadata,
+} from '../../../primitives/devtools';
+import {Listener} from '../../../primitives/devtools';
 import {Injector} from '../../di/injector';
-import {ViewEncapsulation} from '../../metadata/view';
 import {assertLView} from '../assert';
 import {
   discoverLocalRefs,
@@ -24,7 +28,6 @@ import {TElementNode, TNode, TNodeProviderIndexes} from '../interfaces/node';
 import {isRootView} from '../interfaces/type_checks';
 import {CLEANUP, CONTEXT, LView, TVIEW, TViewType} from '../interfaces/view';
 
-import {Framework} from '../../../primitives/devtools';
 import {getRootContext} from './view_traversal_utils';
 import {getLViewParent, unwrapRNode} from './view_utils';
 
@@ -225,72 +228,6 @@ export function getDirectives(node: Node): {}[] {
   return context.directives === null ? [] : [...context.directives];
 }
 
-/** Metadata common to directives from all frameworks.  */
-export interface BaseDirectiveDebugMetadata {
-  name?: string;
-  framework?: Framework;
-}
-
-/**
- * Partial metadata for a given Angular directive instance.
- *
- * @publicApi
- */
-export interface AngularDirectiveDebugMetadata extends BaseDirectiveDebugMetadata {
-  framework?: Framework.Angular; // Optional for backwards compatibility.
-  inputs: Record<string, string>;
-  outputs: Record<string, string>;
-}
-
-/**
- * Partial metadata for a given Angular component instance.
- *
- * @publicApi
- */
-export interface AngularComponentDebugMetadata extends AngularDirectiveDebugMetadata {
-  encapsulation: ViewEncapsulation;
-  changeDetection: ChangeDetectionStrategy;
-}
-
-/** ACX change detection strategies. */
-export enum AcxChangeDetectionStrategy {
-  Default = 0,
-  OnPush = 1,
-}
-
-/** ACX view encapsulation modes. */
-export enum AcxViewEncapsulation {
-  Emulated = 0,
-  None = 1,
-}
-
-/** Partial metadata for a given ACX directive instance. */
-export interface AcxDirectiveDebugMetadata extends BaseDirectiveDebugMetadata {
-  framework: Framework.ACX;
-  inputs: Record<string, string>;
-  outputs: Record<string, string>;
-}
-
-/** Partial metadata for a given ACX component instance. */
-export interface AcxComponentDebugMetadata extends AcxDirectiveDebugMetadata {
-  changeDetection: AcxChangeDetectionStrategy;
-  encapsulation: AcxViewEncapsulation;
-}
-
-/** Partial metadata for a given Wiz component instance. */
-export interface WizComponentDebugMetadata extends BaseDirectiveDebugMetadata {
-  framework: Framework.Wiz;
-  props: Record<string, string>;
-}
-
-/** All potential debug metadata types across all frameworks. */
-export type DirectiveDebugMetadata =
-  | AngularDirectiveDebugMetadata
-  | AcxDirectiveDebugMetadata
-  | AngularComponentDebugMetadata
-  | AcxComponentDebugMetadata
-  | WizComponentDebugMetadata;
-
 /**
  * Returns the debug (partial) metadata for a particular directive or component instance.
  * The function accepts an instance of a directive or component and returns the corresponding
@@ -380,25 +317,6 @@ export function getHostElement(componentOrDirective: {}): Element {
 export function getRenderedText(component: any): string {
   const hostElement = getHostElement(component);
   return hostElement.textContent || '';
-}
-
-/**
- * Event listener configuration returned from `getListeners`.
- * @publicApi
- */
-export interface Listener {
-  /** Name of the event listener. */
-  name: string;
-  /** Element that the listener is bound to. */
-  element: Element;
-  /** Callback that is invoked when the event is triggered. */
-  callback: (value: any) => any;
-  /** Whether the listener is using event capturing. */
-  useCapture: boolean;
-  /**
-   * Type of the listener (e.g. a native DOM event or a custom @Output).
-   */
-  type: 'dom' | 'output';
 }
 
 /**

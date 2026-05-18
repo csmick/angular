@@ -16,7 +16,7 @@ ts_project(
     ),
     deps = [
         "//:node_modules/rxjs",
-        "//packages/core/src/interface",
+        "//packages/core/primitives/interface",
         "//packages/core/src/util",
     ],
 )

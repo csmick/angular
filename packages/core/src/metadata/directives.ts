@@ -6,16 +6,16 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 
-import {ChangeDetectionStrategy} from '../change_detection/constants';
+import {ChangeDetectionStrategy} from '../../primitives/change_detection';
 import {Provider} from '../di/interface/provider';
 import {ForeignComponent} from '../interface/foreign_component';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {compileComponent, compileDirective} from '../render3/jit/directive';
 import {compilePipe} from '../render3/jit/pipe';
 import {makeDecorator, makePropDecorator, TypeDecorator} from '../util/decorators';
 
 import {SchemaMetadata} from './schema';
-import {ViewEncapsulation} from './view';
+import {ViewEncapsulation} from '../../primitives/metadata';
 
 /**
  * Type of the Directive decorator / constructor function.

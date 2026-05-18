@@ -7,7 +7,7 @@
  */
 
 import {RuntimeError, RuntimeErrorCode} from '../errors';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import type {Component} from './directives';
 
 let componentResourceResolutionQueue = new Map<Type<any>, Component>();

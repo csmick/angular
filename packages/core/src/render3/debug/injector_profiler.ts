@@ -12,7 +12,7 @@ import {InjectionToken} from '../../di/injection_token';
 import type {Injector} from '../../di/injector';
 import {InjectOptions, InternalInjectFlags} from '../../di/interface/injector';
 import type {SingleProvider} from '../../di/provider_collection';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import {throwError} from '../../util/assert';
 import type {TNode} from '../interfaces/node';
 import type {LView} from '../interfaces/view';

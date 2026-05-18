@@ -14,7 +14,7 @@ import {formatRuntimeError, RuntimeError, RuntimeErrorCode} from '../errors';
 import {DEFAULT_LOCALE_ID} from '../i18n/localization';
 import {LOCALE_ID} from '../i18n/tokens';
 import {ImagePerformanceWarning} from '../image_performance_warning';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {PLATFORM_DESTROY_LISTENERS} from './platform_destroy_listeners';
 import {setLocaleId} from '../render3/i18n/i18n_locale_id';
 import {NgZone} from '../zone/ng_zone';

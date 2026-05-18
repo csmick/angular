@@ -10,7 +10,7 @@ import {consumerDestroy, setActiveConsumer} from '../../primitives/signals';
 
 import {NotificationSource} from '../change_detection/scheduling/zoneless_scheduling';
 import {hasInSkipHydrationBlockFlag} from '../hydration/skip_hydration';
-import {ViewEncapsulation} from '../metadata/view';
+import {ViewEncapsulation} from '../../primitives/metadata';
 import {RendererStyleFlags2} from '../render/api_flags';
 import {
   assertDefined,

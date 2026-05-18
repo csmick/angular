@@ -12,6 +12,14 @@ ts_project(
             "**/*.ts",
         ],
     ),
+    deps = [
+        "//packages/core/primitives/change_detection",
+        "//packages/core/primitives/control_flow",
+        "//packages/core/primitives/di",
+        "//packages/core/primitives/interface",
+        "//packages/core/primitives/metadata",
+        "//packages/core/primitives/signals",
+    ],
 )
 
 filegroup(

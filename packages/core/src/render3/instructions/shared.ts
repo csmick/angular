@@ -11,7 +11,7 @@ import {INTERNAL_APPLICATION_ERROR_HANDLER} from '../../error_handler';
 import {hasSkipHydrationAttrOnRElement} from '../../hydration/skip_hydration';
 import {PRESERVE_HOST_CONTENT, PRESERVE_HOST_CONTENT_DEFAULT} from '../../hydration/tokens';
 import {processTextNodeMarkersBeforeHydration} from '../../hydration/utils';
-import {ViewEncapsulation} from '../../metadata/view';
+import {ViewEncapsulation} from '../../../primitives/metadata';
 import {validateAgainstEventProperties} from '../../sanitization/sanitization';
 
 import {assertIndexInRange, assertNotSame} from '../../util/assert';

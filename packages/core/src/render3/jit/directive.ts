@@ -17,14 +17,14 @@ import {
 } from '../../compiler/compiler_facade_interface';
 import {resolveForwardRef} from '../../di/forward_ref';
 import {getReflect, reflectDependencies} from '../../di/jit/util';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import type {Query} from '../../metadata/di';
 import type {Component, Directive, Input} from '../../metadata/directives';
 import {
   componentNeedsResolution,
   maybeQueueResolutionOfComponentResources,
 } from '../../metadata/resource_loading';
-import {ViewEncapsulation} from '../../metadata/view';
+import {ViewEncapsulation} from '../../../primitives/metadata';
 import {flatten} from '../../util/array_utils';
 import {EMPTY_ARRAY, EMPTY_OBJ} from '../../util/empty';
 import {initNgDevMode} from '../../util/ng_dev_mode';

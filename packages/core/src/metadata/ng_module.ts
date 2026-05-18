@@ -7,7 +7,7 @@
  */
 
 import {EnvironmentProviders, ModuleWithProviders, Provider} from '../di/interface/provider';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {SchemaMetadata} from '../metadata/schema';
 import {compileNgModule} from '../render3/jit/module';
 import {makeDecorator, TypeDecorator} from '../util/decorators';

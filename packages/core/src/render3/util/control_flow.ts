@@ -30,20 +30,22 @@ import {assertLView} from '../assert';
 import {collectNativeNodes} from '../collect_native_nodes';
 import {getLContext} from '../context_discovery';
 import {CONTAINER_HEADER_OFFSET, LContainer, NATIVE} from '../interfaces/container';
-import {HOST, INJECTOR, LView, TVIEW, HEADER_OFFSET} from '../interfaces/view';
-import {getNativeByTNode} from './view_utils';
 import {isLContainer, isLView} from '../interfaces/type_checks';
+import {HEADER_OFFSET, HOST, INJECTOR, LView, TVIEW} from '../interfaces/view';
+import {getNativeByTNode} from './view_utils';
 
 import {
   ControlFlowBlock,
-  ControlFlowBlockViewFinder,
-  ControlFlowBlockViewFinderConfig,
   ControlFlowBlockType,
   DeferBlockData,
   ForLoopBlockData,
+} from '../../../primitives/control_flow';
+import {TNode} from '../interfaces/node';
+import {
+  ControlFlowBlockViewFinder,
+  ControlFlowBlockViewFinderConfig,
   RepeaterMetadataShape,
 } from './control_flow_types';
-import {TNode} from '../interfaces/node';
 
 /**
  * Gets all of the control flow blocks that are present inside the specified DOM node.

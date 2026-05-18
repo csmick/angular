@@ -9,7 +9,7 @@
 import '../util/ng_dev_mode';
 
 import {RuntimeError, RuntimeErrorCode} from '../errors';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {emitInjectEvent} from '../render3/debug/injector_profiler';
 import {stringify} from '../util/stringify';
 

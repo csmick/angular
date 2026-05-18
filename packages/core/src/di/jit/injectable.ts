@@ -11,7 +11,7 @@ import {
   JitCompilerUsage,
   R3InjectableMetadataFacade,
 } from '../../compiler/compiler_facade';
-import {Type} from '../../interface/type';
+import {Type} from '../../../primitives/interface';
 import {NG_FACTORY_DEF} from '../../render3/fields';
 import {getClosureSafeProperty} from '../../util/property';
 import type {Injectable} from '../injectable';

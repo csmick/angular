@@ -18,7 +18,6 @@
 export {applyChanges} from './util/change_detection_utils';
 export {enableProfiling} from './debug/chrome_dev_tools_performance';
 export {
-  DirectiveDebugMetadata,
   getComponent,
   getContext,
   getDirectiveMetadata,
@@ -28,5 +27,4 @@ export {
   getListeners,
   getOwningComponent,
   getRootComponents,
-  Listener,
 } from './util/discovery_utils';

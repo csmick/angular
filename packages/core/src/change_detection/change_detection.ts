@@ -14,7 +14,7 @@ import {KeyValueDifferFactory, KeyValueDiffers} from './differs/keyvalue_differs
 export {SimpleChange, SimpleChanges} from './simple_change';
 export {devModeEqual} from '../util/comparison';
 export {ChangeDetectorRef} from './change_detector_ref';
-export {ChangeDetectionStrategy} from './constants';
+export {ChangeDetectionStrategy} from '../../primitives/change_detection';
 export {
   DefaultIterableDiffer,
   DefaultIterableDifferFactory,

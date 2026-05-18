@@ -6,10 +6,11 @@
  * found in the LICENSE file at https://angular.dev/license
  */
 
+import {Type} from '../../primitives/interface';
 import {NotificationSource} from '../change_detection/scheduling/zoneless_scheduling';
 import {WritableSignal} from '../core_reactivity_export_internal';
 import {RuntimeError, RuntimeErrorCode} from '../errors';
-import {Type, Writable} from '../interface/type';
+import {Writable} from '../interface/type';
 import {assertNotDefined} from '../util/assert';
 import {bindingUpdated} from './bindings';
 import {controlCreateInternal, controlUpdateInternal} from './instructions/control';

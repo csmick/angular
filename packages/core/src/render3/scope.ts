@@ -7,7 +7,7 @@
  */
 
 import {isForwardRef, resolveForwardRef} from '../di/forward_ref';
-import {Type} from '../interface/type';
+import {Type} from '../../primitives/interface';
 import {flatten} from '../util/array_utils';
 import {noSideEffects} from '../util/closure';
 import {EMPTY_ARRAY} from '../util/empty';
