@@ -83,7 +83,7 @@ export function defineInjectable<T>(opts: {
 export type Constructor<T> = Function & {prototype: T};
 
 export function registerInjectable<T>(
-  ctor: unknown,
+  ctor: Constructor<T>,
   declaration: ɵɵInjectableDeclaration<T>,
 ): InjectionToken<T> {
   (ctor as unknown as InjectionToken<T>).ɵprov = declaration;
