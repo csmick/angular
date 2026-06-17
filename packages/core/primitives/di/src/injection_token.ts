@@ -74,10 +74,10 @@ export function defineInjectable<T>(opts: {
 }): ɵɵInjectableDeclaration<T> {
   return {
     token: opts.token,
-    providedIn: (opts.providedIn as any) || null,
+    providedIn: opts.providedIn || null,
     factory: opts.factory,
     value: undefined,
-  } as ɵɵInjectableDeclaration<T>;
+  };
 }
 
 export type Constructor<T> = Function & {prototype: T};
