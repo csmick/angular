@@ -18,6 +18,7 @@ import {
   StaticClassProvider,
   ValueProvider,
 } from './provider';
+import {ɵɵInjectableDeclaration as PrimitiveInjectableDeclaration} from '@angular/core/primitives/di';
 
 /**
  * Information about how a type or `InjectionToken` interfaces with the DI system.
@@ -34,7 +35,7 @@ import {
  *   deployed to npm, and should be treated as public api.
 
  */
-export interface ɵɵInjectableDeclaration<T> {
+export interface ɵɵInjectableDeclaration<T> extends PrimitiveInjectableDeclaration<T> {
   /**
    * Specifies that the given type belongs to a particular injector:
    * - `InjectorType` such as `NgModule`,
@@ -46,21 +47,9 @@ export interface ɵɵInjectableDeclaration<T> {
   providedIn: InjectorType<any> | 'root' | 'platform' | 'any' | 'environment' | null;
 
   /**
-   * The token to which this definition belongs.
-   *
-   * Note that this may not be the same as the type that the `factory` will create.
-   */
-  token: unknown;
-
-  /**
    * Factory method to execute to create an instance of the injectable.
    */
   factory: (t?: Type<any>) => T;
-
-  /**
-   * In a case of no explicit injector, a location where the instance of the injectable is stored.
-   */
-  value: T | undefined;
 }
 
 /**

@@ -35,7 +35,7 @@ export interface ɵɵInjectableDeclaration<T> {
    * factory, this will create a new instance of the type each time it is
    * requested.
    */
-  providedIn: Type<any> | 'root' | 'platform' | 'any' | null;
+  providedIn: Type<any> | 'root' | 'platform' | 'any' | 'environment' | null;
 
   /**
    * The token to which this definition belongs.
