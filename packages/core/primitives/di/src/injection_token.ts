@@ -64,7 +64,7 @@ export interface ɵɵInjectableDeclaration<T> {
  * @publicApi
  */
 export interface InjectionToken<T> {
-  ɵprov: ɵɵInjectableDeclaration<T>;
+  ɵprov?: ɵɵInjectableDeclaration<T>;
 }
 
 export function defineInjectable<T>(opts: {

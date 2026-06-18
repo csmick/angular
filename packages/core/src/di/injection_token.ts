@@ -9,7 +9,8 @@
 import {Type} from '../interface/type';
 import {assertLessThan} from '../util/assert';
 
-import {ɵɵdefineInjectable} from './interface/defs';
+import {ɵɵdefineInjectable, ɵɵInjectableDeclaration} from './interface/defs';
+import type {InjectionToken as PrimitivesInjectionToken} from '@angular/core/primitives/di';
 
 /**
  * Creates a token that can be used in a DI Provider.
@@ -62,11 +63,11 @@ import {ɵɵdefineInjectable} from './interface/defs';
  *
  * @publicApi
  */
-export class InjectionToken<T> {
+export class InjectionToken<T> implements PrimitivesInjectionToken<T> {
   /** @internal */
   readonly ngMetadataName = 'InjectionToken';
 
-  readonly ɵprov: unknown;
+  readonly ɵprov: ɵɵInjectableDeclaration<T> | undefined;
 
   /**
    * @deprecated The `providedIn: NgModule` or `providedIn:'any'` options are deprecated. Please use the other signature.
@@ -129,5 +130,5 @@ export class InjectionToken<T> {
 }
 
 export interface InjectableDefToken<T> extends InjectionToken<T> {
-  ɵprov: unknown;
+  ɵprov: ɵɵInjectableDeclaration<T>;
 }

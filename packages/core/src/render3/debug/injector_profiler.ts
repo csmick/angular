@@ -291,7 +291,7 @@ export function emitProviderConfiguredEvent(
   // as `ɵprov`. In this case, we want to emit the provider that is attached to the token, not the
   // token itself.
   if (eventProvider instanceof InjectionToken) {
-    provider = (eventProvider.ɵprov as FactoryProvider) || eventProvider;
+    provider = (eventProvider.ɵprov as unknown as FactoryProvider) || eventProvider;
   }
 
   injectorProfiler({

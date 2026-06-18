@@ -186,7 +186,11 @@ function runCanActivateChild(
   const canActivateChildGuardsMapped = canActivateChildGuards.map((d: any) => {
     return defer(() => {
       const guardsMapped = d.guards.map(
-        (canActivateChild: CanActivateChildFn | ProviderToken<unknown>) => {
+        (
+          canActivateChild:
+            | CanActivateChildFn
+            | ProviderToken<{canActivateChild: CanActivateChildFn}>,
+        ) => {
           const closestInjector = d.node._environmentInjector;
           const guard = getTokenOrFunctionIdentity<{canActivateChild: CanActivateChildFn}>(
             canActivateChild,
